@@ -38,4 +38,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	l2 = l2 > n ? n : l2;
 	r = s = malloc(l1 + l2 + 1);
-
+if (!s)
+		return (NULL);
+	while (*s1)
+		*s++ = *s1++;
+	while (l2--)
+		*s++ = *s2++;
+	*s = '\0';
+	return (r);
+}
