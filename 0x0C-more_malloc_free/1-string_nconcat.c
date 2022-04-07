@@ -35,10 +35,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	l1 = _strlen(s1);
 	l2 = _strlen(s2);
-
+        
 	l2 = l2 > n ? n : l2;
 	r = s = malloc(l1 + l2 + 1);
-if (!s)
+        if (!s)
 		return (NULL);
 	while (*s1)
 		*s++ = *s1++;
